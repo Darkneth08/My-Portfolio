@@ -1,0 +1,43 @@
+services:
+  - type: web
+    name: kenneth-portfolio
+    runtime: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: APP_NAME
+        value: Kenneth Portfolio
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_URL
+        sync: false
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: DB_CONNECTION
+        value: sqlite
+      - key: DB_DATABASE
+        value: /tmp/database.sqlite
+      - key: SESSION_DRIVER
+        value: file
+      - key: CACHE_STORE
+        value: file
+      - key: QUEUE_CONNECTION
+        value: sync
+      - key: PORTFOLIO_OWNER_NAME
+        value: Kenneth Borja
+      - key: PORTFOLIO_OWNER_EMAIL
+        value: kennethborja2003@gmail.com
+      - key: PORTFOLIO_SECONDARY_EMAIL
+        value: kennethborja00@gmail.com
+      - key: PORTFOLIO_GITHUB_USERNAME
+        value: Darkneth08
+      - key: PORTFOLIO_GITHUB_URL
+        value: https://github.com/Darkneth08?tab=repositories
+      - key: PORTFOLIO_FACEBOOK_URL
+        value: https://www.facebook.com/share/17yoZGKbnQ/
+      - key: PORTFOLIO_ADMIN_EMAIL
+        value: admin@kenneth.test
+      - key: PORTFOLIO_ADMIN_PASSWORD
+        sync: false

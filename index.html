@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kenneth Borja portfolio - IT student, web developer, PHP/Laravel learner, UI/UX designer, and network fundamentals enthusiast." />
+    <meta name="author" content="Kenneth Borja" />
+    <title>Kenneth Borja | Developer Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="page-progress" aria-hidden="true"><span></span></div>
+
+    <header class="site-header" id="top">
+        <a class="logo" href="#home" aria-label="Kenneth Borja home">
+            <span class="logo-mark">KB</span>
+            <span class="logo-text">Kenneth</span>
+        </a>
+
+        <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#journey" class="nav-link">Journey</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero section" id="home">
+            <div class="hero-bg" aria-hidden="true"></div>
+            <div class="hero-content reveal">
+                <p class="eyebrow"><i class="fa-solid fa-location-dot"></i> Davao City, Philippines</p>
+                <h1>Hi, I'm <span>Kenneth Borja</span></h1>
+                <h2 class="role-line">I build <span id="typedText">modern web systems</span><span class="typing-caret">|</span></h2>
+                <p class="hero-description">
+                    Information Technology student focused on building practical, responsive, and user-friendly web systems using HTML, CSS, JavaScript, PHP, Laravel, MySQL, and modern UI/UX practices.
+                </p>
+
+                <div class="hero-tags" aria-label="Main strengths">
+                    <span>Web Development</span>
+                    <span>PHP / Laravel</span>
+                    <span>UI/UX Design</span>
+                    <span>Network Basics</span>
+                </div>
+
+                <div class="hero-actions">
+                    <a class="btn primary" href="#projects"><i class="fa-solid fa-eye"></i> View Projects</a>
+                    <a class="btn secondary" href="mailto:kennethborja2003@gmail.com"><i class="fa-solid fa-paper-plane"></i> Hire Me</a>
+                    <button class="btn ghost" id="downloadCv" type="button"><i class="fa-solid fa-download"></i> Download CV</button>
+                </div>
+
+                <div class="social-links" aria-label="Social links">
+                    <a href="https://github.com/Darkneth08?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="GitHub repositories"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="needs-link" aria-label="Facebook profile"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="mailto:kennethborja2003@gmail.com" aria-label="Email Kenneth"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="#contact" aria-label="Contact section"><i class="fa-solid fa-address-card"></i></a>
+                </div>
+            </div>
+
+            <div class="hero-visual reveal delay-1">
+                <div class="avatar-card tilt-card">
+                    <div class="avatar-ring"></div>
+                    <img id="profileImage" src="main.jpg" alt="Kenneth Borja profile photo" />
+                    <div class="avatar-fallback" id="avatarFallback" aria-hidden="true">KB</div>
+                    <div class="status-pill"><span></span> Open for Projects</div>
+                </div>
+
+                <div class="floating-card code-card tilt-card">
+                    <span class="window-dots"><i></i><i></i><i></i></span>
+<pre><code>const portfolio = {
+  name: "Kenneth Borja",
+  focus: "Real-world systems",
+  status: "Learning + Building"
+};</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <div class="section-heading reveal">
+                <p class="eyebrow">About Me</p>
+                <h2>Developer with a practical and project-based mindset</h2>
+                <p>I enjoy turning school and real-world problems into clean digital solutions that are easy to use, responsive, and organized.</p>
+            </div>
+
+            <div class="about-grid">
+                <article class="glass-card reveal">
+                    <i class="fa-solid fa-laptop-code card-icon"></i>
+                    <h3>What I Do</h3>
+                    <p>I create responsive websites, CRUD systems, dashboards, landing pages, and student/business system prototypes.</p>
+                </article>
+                <article class="glass-card reveal delay-1">
+                    <i class="fa-solid fa-bullseye card-icon"></i>
+                    <h3>My Goal</h3>
+                    <p>To become a professional full-stack developer who can build useful web and mobile systems for real users.</p>
+                </article>
+                <article class="glass-card reveal delay-2">
+                    <i class="fa-solid fa-shield-halved card-icon"></i>
+                    <h3>My Style</h3>
+                    <p>Clean layout, smooth transitions, strong readability, practical features, and organized source code.</p>
+                </article>
+            </div>
+
+            <div class="stats-grid reveal">
+                <div class="stat-card"><strong id="repoCount">17</strong><span>GitHub Repositories</span></div>
+                <div class="stat-card"><strong>10+</strong><span>School / Practice Projects</span></div>
+                <div class="stat-card"><strong>4</strong><span>Main Skill Areas</span></div>
+                <div class="stat-card"><strong>2022</strong><span>BSIT Journey Started</span></div>
+            </div>
+        </section>
+
+        <section class="services section" id="services">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Services</p>
+                <h2>What I can build</h2>
+                <p>These are the areas I can present professionally in a portfolio, capstone, or internship application.</p>
+            </div>
+
+            <div class="services-grid">
+                <article class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>Responsive Website</h3>
+                    <p>Modern landing pages, portfolio websites, and public-facing pages with mobile-friendly design.</p>
+                    <ul>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>Smooth animations</li>
+                        <li>Clean sections and layout</li>
+                    </ul>
+                </article>
+                <article class="service-card reveal delay-1">
+                    <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+                    <h3>CRUD Systems</h3>
+                    <p>Student and business systems with create, read, update, delete, search, and admin features.</p>
+                    <ul>
+                        <li>PHP / Laravel</li>
+                        <li>MySQL database</li>
+                        <li>Role-based pages</li>
+                    </ul>
+                </article>
+                <article class="service-card reveal delay-2">
+                    <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
+                    <h3>UI/UX Prototype</h3>
+                    <p>Wireframes and interface designs for dashboards, portals, and system workflows.</p>
+                    <ul>
+                        <li>Figma wireframes</li>
+                        <li>User-friendly flow</li>
+                        <li>Dashboard planning</li>
+                    </ul>
+                </article>
+                <article class="service-card reveal delay-3">
+                    <div class="service-icon"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3>IT Fundamentals</h3>
+                    <p>Basic support for networking concepts, documentation, and technical problem solving.</p>
+                    <ul>
+                        <li>Network basics</li>
+                        <li>System documentation</li>
+                        <li>Technical troubleshooting</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="skills section" id="skills">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Skills</p>
+                <h2>Technology stack and strengths</h2>
+                <p>Skill bars animate when this section appears on screen.</p>
+            </div>
+
+            <div class="skills-layout">
+                <div class="skill-panel reveal">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-item" data-progress="92"><span>HTML / CSS</span><b>92%</b><div><i></i></div></div>
+                    <div class="skill-item" data-progress="86"><span>JavaScript</span><b>86%</b><div><i></i></div></div>
+                    <div class="skill-item" data-progress="82"><span>PHP / Laravel</span><b>82%</b><div><i></i></div></div>
+                    <div class="skill-item" data-progress="78"><span>MySQL</span><b>78%</b><div><i></i></div></div>
+                    <div class="skill-item" data-progress="72"><span>UI/UX / Figma</span><b>72%</b><div><i></i></div></div>
+                </div>
+
+                <div class="skill-panel reveal delay-1">
+                    <h3>Professional Skills</h3>
+                    <div class="skill-item" data-progress="94"><span>Problem Solving</span><b>94%</b><div><i></i></div></div>
+                    <div class="skill-item" data-progress="90"><span>Team Collaboration</span><b>90%</b><div><i></i></div></div>
+                    <div class="skill-item" data-progress="88"><span>Communication</span><b>88%</b><div><i></i></div></div>
+                    <div class="skill-item" data-progress="86"><span>Documentation</span><b>86%</b><div><i></i></div></div>
+                    <div class="skill-item" data-progress="84"><span>Time Management</span><b>84%</b><div><i></i></div></div>
+                </div>
+            </div>
+
+            <div class="tech-marquee reveal" aria-label="Technologies">
+                <div class="marquee-track">
+                    <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>PHP</span><span>Laravel</span><span>MySQL</span><span>Bootstrap</span><span>GitHub</span><span>Figma</span><span>VS Code</span>
+                    <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>PHP</span><span>Laravel</span><span>MySQL</span><span>Bootstrap</span><span>GitHub</span><span>Figma</span><span>VS Code</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects section" id="projects">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Projects</p>
+                <h2>GitHub-powered project showcase</h2>
+                <p>This section automatically loads public repositories from your GitHub account. It also has fallback projects when offline.</p>
+            </div>
+
+            <div class="project-toolbar reveal">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" id="projectSearch" placeholder="Search projects..." aria-label="Search projects" />
+                </div>
+                <div class="filter-buttons" aria-label="Project filters">
+                    <button class="filter-btn active" type="button" data-filter="all">All</button>
+                    <button class="filter-btn" type="button" data-filter="PHP">PHP</button>
+                    <button class="filter-btn" type="button" data-filter="Blade">Laravel</button>
+                    <button class="filter-btn" type="button" data-filter="JavaScript">JavaScript</button>
+                    <button class="filter-btn" type="button" data-filter="HTML">HTML</button>
+                </div>
+            </div>
+
+            <div class="project-status reveal" id="projectStatus">
+                <i class="fa-solid fa-circle-notch fa-spin"></i> Loading GitHub projects...
+            </div>
+
+            <div class="projects-grid" id="projectGrid" aria-live="polite"></div>
+
+            <div class="center-actions reveal">
+                <a class="btn secondary" href="https://github.com/Darkneth08?tab=repositories" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github"></i> View All GitHub Repositories
+                </a>
+            </div>
+        </section>
+
+        <section class="journey section" id="journey">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Journey</p>
+                <h2>Education and experience</h2>
+                <p>A cleaner timeline for your background, learning path, and project experience.</p>
+            </div>
+
+            <div class="timeline">
+                <article class="timeline-item reveal">
+                    <span class="timeline-date">2022 - Present</span>
+                    <div class="timeline-content">
+                        <h3>BS Information Technology</h3>
+                        <h4>University of Mindanao</h4>
+                        <p>Building knowledge in programming, web development, system analysis, databases, networking, and IT project development.</p>
+                    </div>
+                </article>
+                <article class="timeline-item reveal delay-1">
+                    <span class="timeline-date">2024 - Present</span>
+                    <div class="timeline-content">
+                        <h3>Project-Based Developer</h3>
+                        <h4>School and personal systems</h4>
+                        <p>Created and practiced systems such as inventory, library borrowing, boarding house reservation, user management, CRUD projects, and portfolio websites.</p>
+                    </div>
+                </article>
+                <article class="timeline-item reveal delay-2">
+                    <span class="timeline-date">2017 - 2022</span>
+                    <div class="timeline-content">
+                        <h3>ICT Strand</h3>
+                        <h4>Leon Garcia Sr. National High School</h4>
+                        <p>Studied programming fundamentals, computer systems, and digital tools that helped start the IT journey.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Contact</p>
+                <h2>Let's build something useful</h2>
+                <p>Use the form to create an email draft, copy my email, or open my GitHub repositories.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card reveal">
+                    <h3>Contact Information</h3>
+                    <p class="contact-note">For public safety, this portfolio shows general location only. You can add phone number later if you really need it.</p>
+
+                    <a class="contact-row" href="mailto:kennethborja2003@gmail.com">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span><strong>Email</strong>kennethborja2003@gmail.com</span>
+                    </a>
+                    <a class="contact-row" href="https://github.com/Darkneth08?tab=repositories" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i>
+                        <span><strong>GitHub</strong>Darkneth08 repositories</span>
+                    </a>
+                    <a class="contact-row needs-link" href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                        <span><strong>Facebook</strong>Add your Facebook profile link</span>
+                    </a>
+                    <div class="contact-row">
+                        <i class="fa-solid fa-map-marker-alt"></i>
+                        <span><strong>Location</strong>Davao City, Philippines</span>
+                    </div>
+
+                    <div class="contact-actions">
+                        <button class="btn ghost" id="copyEmail" type="button"><i class="fa-solid fa-copy"></i> Copy Email</button>
+                        <a class="btn secondary" href="mailto:kennethborja2003@gmail.com"><i class="fa-solid fa-envelope-open"></i> Email Me</a>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal delay-1" id="contactForm">
+                    <h3>Send a Message</h3>
+                    <label>
+                        <span>Your Name</span>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+                    </label>
+                    <label>
+                        <span>Your Email</span>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required />
+                    </label>
+                    <label>
+                        <span>Subject</span>
+                        <input type="text" id="subject" name="subject" placeholder="Project / Internship / Collaboration" required />
+                    </label>
+                    <label>
+                        <span>Message</span>
+                        <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+                    </label>
+                    <button class="btn primary full" type="submit"><i class="fa-solid fa-paper-plane"></i> Open Email Draft</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="currentYear"></span> Kenneth Borja. Built with HTML, CSS, and JavaScript.</p>
+        <a href="#home" class="back-top" id="backTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+</body>
+</html>

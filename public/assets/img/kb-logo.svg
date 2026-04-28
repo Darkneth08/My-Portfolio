@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="KB logo">
+  <defs>
+    <linearGradient id="kbGradient" x1="20" y1="14" x2="112" y2="118" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22d3ee"/>
+      <stop offset="0.48" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#ff4d6d"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#111827" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="128" height="128" rx="34" fill="#050816"/>
+  <rect x="10" y="10" width="108" height="108" rx="28" fill="url(#kbGradient)" filter="url(#shadow)"/>
+  <path d="M35 32h15v29l26-29h19L67 62l31 34H78L50 65v31H35V32Z" fill="#fff"/>
+</svg>
