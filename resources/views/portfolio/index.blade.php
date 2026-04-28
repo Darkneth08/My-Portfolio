@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenneth Borja | Professional Portfolio</title>
     <meta name="description" content="Kenneth Borja professional resume portfolio - web developer, Laravel developer, UI/UX system builder, and dashboard creator from Davao City, Philippines.">
-    <link rel="icon" type="image/svg+xml" href="{{ asset('assets/img/kb-logo.svg') }}">
-    <link rel="apple-touch-icon" href="{{ asset('assets/img/kb-logo.svg') }}">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/kb-logo.svg">
+    <link rel="apple-touch-icon" href="/assets/img/kb-logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="{{ asset('assets/css/portfolio.css') }}">
+    <link rel="stylesheet" href="/assets/css/portfolio.css">
 </head>
 <body>
     <canvas class="space-canvas" id="spaceCanvas" aria-hidden="true"></canvas>
@@ -35,7 +35,7 @@
         </nav>
 
         <div class="header-actions">
-            <a href="{{ route('admin.login') }}" class="admin-link">Admin</a>
+            <a href="{{ route('admin.login', absolute: false) }}" class="admin-link">Admin</a>
             <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
             <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
@@ -80,7 +80,7 @@
                             <span></span><span></span><span></span>
                         </div>
                         <div class="avatar-orb">
-                            <img src="{{ asset('assets/img/kenneth-profile.jpg') }}" alt="Kenneth Borja professional profile photo">
+                            <img src="/assets/img/kenneth-profile.jpg" alt="Kenneth Borja professional profile photo">
                         </div>
                         <div class="orbit orbit-one"><span>Laravel</span></div>
                         <div class="orbit orbit-two"><span>MySQL</span></div>
@@ -226,7 +226,7 @@ return view('admin.dashboard');</code></pre>
                             @endforeach
                         </div>
                         <div class="project-links">
-                            <a href="{{ route('projects.show', $project) }}">Details</a>
+                            <a href="{{ route('projects.show', $project, absolute: false) }}">Details</a>
                             @if($project->github_url)<a href="{{ $project->github_url }}" target="_blank" rel="noopener">GitHub</a>@endif
                             @if($project->live_url)<a href="{{ $project->live_url }}" target="_blank" rel="noopener">Live</a>@endif
                         </div>
@@ -285,7 +285,7 @@ return view('admin.dashboard');</code></pre>
                     </ul>
                 </aside>
 
-                <form class="contact-form reveal delay-1" action="{{ route('contact.store') }}" method="POST">
+                <form class="contact-form reveal delay-1" action="{{ route('contact.store', absolute: false) }}" method="POST">
                     @csrf
 
                     @if(session('success'))
@@ -329,6 +329,6 @@ return view('admin.dashboard');</code></pre>
         <p>© <span id="year"></span> Kenneth Borja. Built with Laravel.</p>
     </footer>
 
-    <script src="{{ asset('assets/js/portfolio.js') }}"></script>
+    <script src="/assets/js/portfolio.js"></script>
 </body>
 </html>
