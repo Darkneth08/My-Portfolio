@@ -9,6 +9,8 @@ services:
         value: Kenneth Portfolio
       - key: APP_ENV
         value: production
+      - key: APP_KEY
+        value: base64:I6wKbzrtGsrkqFCTVK6aGamFNji6SRLmGsQivaMwdZQ=
       - key: APP_DEBUG
         value: false
       - key: APP_URL
