@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: kristine-portfolio
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    disk:
+      name: kristine-portfolio-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: APP_NAME
+        value: Kristine Portfolio
+      - key: APP_ENV
+        value: production
+      - key: APP_KEY
+        generateValue: true
+      - key: APP_DEBUG
+        value: false
+      - key: APP_URL
+        value: https://kristine-portfolio.onrender.com
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: DB_CONNECTION
+        value: sqlite
+      - key: DB_DATABASE
+        value: /var/data/database.sqlite
+      - key: SESSION_DRIVER
+        value: file
+      - key: CACHE_STORE
+        value: file
+      - key: QUEUE_CONNECTION
+        value: sync
+      - key: MAIL_MAILER
+        value: log
+      - key: PORTFOLIO_ADMIN_PIN
+        sync: false

@@ -1,0 +1,17 @@
+.git
+.github
+.env
+.env.*
+.codex
+.cursor
+.idea
+.vscode
+node_modules
+vendor
+public/build
+public/hot
+storage/app/verification
+storage/logs/*.log
+database/database.sqlite
+Thumbs.db
+.DS_Store
