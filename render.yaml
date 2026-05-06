@@ -5,17 +5,13 @@ services:
     plan: free
     dockerfilePath: ./Dockerfile
     healthCheckPath: /
-    disk:
-      name: kristine-portfolio-data
-      mountPath: /var/data
-      sizeGB: 1
     envVars:
       - key: APP_NAME
         value: Kristine Portfolio
       - key: APP_ENV
         value: production
       - key: APP_KEY
-        generateValue: true
+        sync: false
       - key: APP_DEBUG
         value: false
       - key: APP_URL
@@ -23,9 +19,15 @@ services:
       - key: LOG_CHANNEL
         value: stderr
       - key: DB_CONNECTION
-        value: sqlite
-      - key: DB_DATABASE
-        value: /var/data/database.sqlite
+        value: pgsql
+      - key: DB_URL
+        fromDatabase:
+          name: kristine-portfolio-db
+          property: connectionString
+      - key: DATABASE_URL
+        fromDatabase:
+          name: kristine-portfolio-db
+          property: connectionString
       - key: SESSION_DRIVER
         value: file
       - key: CACHE_STORE
@@ -36,3 +38,7 @@ services:
         value: log
       - key: PORTFOLIO_ADMIN_PIN
         sync: false
+
+databases:
+  - name: kristine-portfolio-db
+    plan: free

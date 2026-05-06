@@ -7,7 +7,7 @@ React + Laravel portfolio with a live Three.js hero, light/dark mode, downloadab
 - React single-page portfolio mounted inside Laravel
 - Three.js animated finance-themed visual scene
 - Light and dark mode
-- Contact form saved to SQLite
+- Contact form saved to the configured database
 - Admin inbox at `/admin`
 - Message search, read, reply, archive, and delete actions
 - Render deployment files included
@@ -44,4 +44,14 @@ This repo includes:
 - `render.yaml`
 - `.dockerignore`
 
-In Render, create a new Blueprint from this GitHub repository. Render will build the Docker image, run migrations, and keep the SQLite database on a persistent disk at `/var/data/database.sqlite`.
+In Render, create a new Blueprint from this GitHub repository. Render will build the Docker image, run migrations, and connect the portfolio to Render Postgres.
+
+The Blueprint creates:
+
+- A free Docker web service
+- A free Render Postgres database for contact/admin messages
+
+Render will ask for these secret values during Blueprint setup:
+
+- `APP_KEY`: generate one with `php artisan key:generate --show`
+- `PORTFOLIO_ADMIN_PIN`: your admin inbox PIN

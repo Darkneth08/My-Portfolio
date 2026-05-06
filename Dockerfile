@@ -5,9 +5,10 @@ RUN apt-get update \
         ca-certificates \
         curl \
         git \
+        libpq-dev \
         libsqlite3-dev \
         unzip \
-    && docker-php-ext-install pdo pdo_sqlite \
+    && docker-php-ext-install pdo pdo_pgsql pdo_sqlite \
     && curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
     && apt-get install -y --no-install-recommends nodejs \
     && apt-get clean \
@@ -32,4 +33,4 @@ RUN composer dump-autoload --optimize \
 
 EXPOSE 10000
 
-CMD ["sh", "-c", "mkdir -p /var/data storage/logs storage/framework/cache storage/framework/sessions storage/framework/views bootstrap/cache && touch ${DB_DATABASE:-/var/data/database.sqlite} && php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=${PORT:-10000}"]
+CMD ["sh", "-c", "mkdir -p storage/logs storage/framework/cache storage/framework/sessions storage/framework/views bootstrap/cache && php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=${PORT:-10000}"]
